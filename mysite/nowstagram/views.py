@@ -208,6 +208,10 @@ def upload():
 def secret():
     return 'Only authenticated users are allowed!'
 
+@app.route('/testCD')
+def testCD():
+    return 'CD is Successfully!!!'
+
 class MyUserModel(ModelView):
     column_display_pk = True
     column_formatters = dict( password = lambda v,c,m,p:'**'+m.password[-6:])
